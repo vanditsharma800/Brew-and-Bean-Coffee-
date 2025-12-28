@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bean</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">BREW & BEAN</div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <button class="auth-btn" onclick="openModal('login')">Sign In</button>
+            <button class="cart-toggle" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-banner">
+        <div class="hero-content">
+            <h1>Roasted in Jaipur, <br> Poured for You.</h1>
+            <p>Experience the rich aroma of hand-picked beans.</p>
+            <a href="#menu" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section" style="padding: 80px 8%; background: #fff;">
+        <div class="about-container"
+            style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap; margin-bottom: 60px;">
+            <div class="about-image" style="flex: 1; min-width: 300px;">
+                <img src="https://images.pexels.com/photos/1233528/pexels-photo-1233528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" style="width: 100%; border-radius: 15px; box-shadow: 15px 15px 0px #c0a080;">
+            </div>
+            <div class="about-text" style="flex: 1; min-width: 300px;">
+                <h2 style="color: #4b3832; font-size: 2.8rem; margin-bottom: 20px;">Brewing Joy in Jaipur</h2>
+                <p style=" color: #555; margin-bottom: 15px; font-size: 18px;">
+                    Founded in 2021 in the vibrant lanes of <strong>C-Scheme</strong>, Brew & Bean was born out of a
+                    passion for the perfect roast. We don't just serve coffee; we celebrate the rich heritage of Indian
+                    coffee beans, roasted locally to suit the palate of the Pink City.
+                </p>
+                <p style="line-height: 1.8; color: #555; margin-bottom: 15px;">
+                    Our beans are ethically sourced from the hills of Chikmagalur and Coorg, brought straight to Jaipur
+                    where they are small-batch roasted every week to ensure maximum freshness.
+                </p>
+                <div class="about-stats" style="display: flex; gap: 30px; margin-top: 30px;">
+                    <div><strong style="font-size: 1.5rem; color: #6f4e37;">5k+</strong>
+                        <p style="font-size: 15px;">Happy Customers</p>
+                    </div>
+                    <div><strong style="font-size: 1.5rem; color: #6f4e37;">12+</strong>
+                        <p style="font-size: 15px;">Signature Blends</p>
+                    </div>
+                    <div><strong style="font-size: 1.5rem; color: #6f4e37;">100%</strong>
+                        <p style="font-size: 15px;">Organic Beans</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="values-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 50px; text-align: center;">
+            <div class="value-item" style="padding: 20px; background: #fdfaf5; border-radius: 12px;">
+                <div style="font-size: 25px; margin-bottom: 10px;">☕</div>
+                <h4 style="color: #4b3832; margin-bottom: 10px;">Expert Roasting</h4>
+                <p style="font-size: 15px; color: #666;">Our master roasters fine-tune every batch to bring out unique
+                    notes of chocolate, nuts, and fruit.</p>
+            </div>
+            <div class="value-item" style="padding: 20px; background: #fdfaf5; border-radius: 12px;">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">🍃</div>
+                <h4 style="color: #4b3832; margin-bottom: 10px;">Ethically Sourced</h4>
+                <p style="font-size: 15px; color: #666;">We work directly with farmers to ensure fair pay and
+                    sustainable farming practices.</p>
+            </div>
+            <div class="value-item" style="padding: 20px; background: #fdfaf5; border-radius: 12px;">
+                <div style="font-size: 25px; margin-bottom: 10px;">🏡</div>
+                <h4 style="color: #4b3832; margin-bottom: 10px;">Cozy Workspace</h4>
+                <p style="font-size: 15px; color: #666;">High-speed Wi-Fi and comfortable seating make us the favorite
+                    hub for Jaipur's creators.</p>
+            </div>
+            <div class="value-item" style="padding: 20px; background: #fdfaf5; border-radius: 12px;">
+                <div style="font-size: 25px; margin-bottom: 10px;">🎨</div>
+                <h4 style="color: #4b3832; margin-bottom: 10px;">Artisan Treats</h4>
+                <p style="font-size: 15px; color: #666;">Pairs perfectly with our locally baked sourdough and handmade
+                    desserts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-container">
+        <h2 class="section-title">Our Signature Brews</h2>
+        <div class="menu-grid">
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&q=80"
+                    alt="" class="coffee-img">
+                <h3>Classic Espresso</h3>
+                <p>Layers of steamed milk and espresso with caramel.</p>
+                <span class="price">₹180</span>
+                <button onclick="addToCart('Classic Espresso', 180)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/1233528/pexels-photo-1233528.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Velvet Latte" class="coffee-img">
+                <h3>Velvet Latte</h3>
+                <p>Smooth steamed milk over espresso.</p>
+                <span class="price">₹240</span>
+                <button onclick="addToCart('Velvet Latte', 240)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=500&q=80"
+                    alt="Iced Americano" class="coffee-img">
+                <h3>Finely ground beans with hints of cardamom.</h3>
+                <p>Chilled perfection for Jaipur heat.</p>
+                <span class="price">₹210</span>
+                <button onclick="addToCart('Iced Americano', 210)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=500&q=80"
+                    alt="Caramel Macchiato" class="coffee-img">
+                <h3>Caramel Macchiato</h3>
+                <p>Vanilla syrup, milk, and caramel drizzle.</p>
+                <span class="price">₹280</span>
+                <button onclick="addToCart('Caramel Macchiato', 280)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=500&q=80"
+                    alt="Mocha Fusion" class="coffee-img">
+                <h3>Mocha Fusion</h3>
+                <p>A fruity twist on our classic cold brew.</p>
+                <span class="price">₹260</span>
+                <button onclick="addToCart('Mocha Fusion', 260)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/2615323/pexels-photo-2615323.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Cold Brew" class="coffee-img">
+                <h3>Nitro Cold Brew</h3>
+                <p>12-hour steep for ultimate smoothness.</p>
+                <span class="price">₹230</span>
+                <button onclick="addToCart('Cold Brew', 230)">Add to Cart</button>
+            </div>
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=500"
+                    alt="Hazelnut Latte" class="coffee-img">
+                <h3>Hazelnut Praline</h3>
+                <p>Toasted hazelnut syrup with a nutty finish.</p>
+                <span class="price">₹290</span>
+                <button onclick="addToCart('Hazelnut Praline', 290)">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/2615323/pexels-photo-2615323.jpeg?auto=compress&cs=tinysrgb&w=500"
+                    alt="Affogato" class="coffee-img">
+                <h3>Midnight Affogato</h3>
+                <p>Vanilla bean gelato "drowned" in hot espresso.</p>
+                <span class="price">₹320</span>
+                <button onclick="addToCart('Midnight Affogato', 320)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>🛒 Your Coffee</h3>
+            <span class="close-cart" onclick="toggleCart()">×</span>
+        </div>
+
+        <div id="cart-items-list" class="cart-items"></div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <strong>₹<span id="cart-total">0</span></strong>
+            </div>
+            <button class="pay-btn" onclick="processPayment()">Pay & Order</button>
+        </div>
+    </aside>
+
+
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title">Sign In</h2>
+            <input type="email" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+            <button class="submit-btn" onclick="closeModal()">Enter</button>
+            <p onclick="toggleAuthMode()" style="cursor:pointer; font-size: 15px; margin-top: 10px;">Don't have an
+                account? Sign Up</p>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="footer-info">
+            <p><strong>Brew & Bean Coffee Co.</strong></p>
+            <p>C-Scheme, Jaipur, Rajasthan, 302001</p>
+            <p>Open: 8:00 AM - 11:00 PM</p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Brew & Bean Jaipur. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

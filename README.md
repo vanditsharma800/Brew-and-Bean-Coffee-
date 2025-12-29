@@ -10,6 +10,6 @@
 
 𝗛𝗼𝘄 𝘁𝗼 𝗥𝘂𝗻 𝘁𝗵𝗲 𝗣𝗿𝗼𝗷𝗲𝗰𝘁 Download or clone this repository Open index.html in any web browser Explore the website and features
 
-𝗧𝗲𝗮𝗺 𝗠𝗲𝗺𝗯𝗲𝗿𝘀 Prateek Jangid Tarun Sharma Tushar Sharma Vandit Sharma
+𝗧𝗲𝗮𝗺 𝗠𝗲𝗺𝗯𝗲𝗿𝘀 Prateek Jangid, Tarun Sharma, Tushar Sharma, Vandit Sharma
 
 𝐋𝐨𝐜𝐚𝐭𝐢𝐨𝐧 𝐈𝐧𝐟𝐨 Brew & Bean Coffee Co. C-Scheme, Jaipur, Rajasthan Open: 8:00 AM – 11:00 PM
